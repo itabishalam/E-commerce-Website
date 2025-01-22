@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="static/checkout.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="static/logo.png" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="drips.html">Drips</a></li>
+        <li><a href="wearable.html">Wearables</a></li>
+        <li><a href="#">Shoes</a></li>
+      </ul>
+    </nav>
+    <div class="right-section">
+      <a href="javascript:void(0);" onclick="openCart()">
+        <img class="cart" src="static/cart.png" alt="Cart"><h3 id="cart-count">0</h3>
+      </a>
+      <a href="login.html"><img class="cart" src="static/user.png" alt="User"></a>
+    </div>
+  </header>
+
+<!-- Checkout Section -->
+<div class="checkout-section">
+    <h1>Checkout</h1>
+    <div class="checkout-product-list" id="checkout-product-list"></div>
+    
+    <!-- Total Price -->
+    <div class="checkout-total">
+      <h3>Total Price: ₹<span id="total-price">0</span></h3>
+    </div>
+  
+    <!-- Payment Form -->
+    <form id="payment-form">
+      <div id="card-element"><!-- A Stripe Element will be inserted here. --></div>
+      <button id="submit">Pay Now</button>
+      <div id="payment-result"></div>
+    </form>
+  
+    <!-- Empty Cart Message -->
+    <div id="empty-cart-message" style="display: none;">
+      <h3>Your cart is empty!</h3>
+    </div>
+  
+    <!-- Checkout Button -->
+    <div class="checkout-actions">
+      <button id="checkout-btn" onclick="completeCheckout()">Complete Checkout</button>
+      <button onclick="window.location.href='index.html'">Go Back</button>
+    </div>
+  </div>
+  
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="static/drips.js"></script>
+  <script src="static/drips.js"></script>
+  <script src="static/checkout.js"></script>
+</body>
+</html>

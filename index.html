@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Manistry</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="static/logo.png" alt="Manistry Logo"> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="drips.html">Drips</a></li>
+                <li><a href="wearable.html">Wearables</a></li>
+                <li><a href="shoes.html">Shoes</a></li>
+            </ul>
+        </nav>
+        <div class="right-section">
+            <a href="javascript:void(0);" onclick="openCart()">
+                <img class="cart" src="static/cart.png" alt="Cart"><h3 id="cart-count">0</h3>
+              </a>  
+            <a href="login.html"><img class="cart" src="static/user.png" alt="User"></a>
+        </div>
+    </header>
+
+    <div class="banner">
+        <a href="#"><img src="static/banner.jpg" alt="Banner"></a>
+    </div>
+
+    <!-- Swiper Container -->
+    <h1 class="new-arrival-title">NEW ARRIVAL</h1>
+    <div class="swiper-container" id="swiper-container">
+        <div class="swiper-wrapper" id="swiper-wrapper">
+            <!-- Dynamic slides will be inserted here -->
+        </div>
+        <!-- Swiper Navigation -->
+    </div>
+
+    <!-- Cart Tab -->
+  <!-- Cart Tab -->
+<div class="cart-tab" id="cartTab">
+    <h1>Your Cart</h1>
+    <div class="cart-items"></div>  
+    <div class="btn">
+        <button class="checkout" onclick="window.location.href='checkout.html'">Checkout</button>
+      <button class="close" onclick="closeCart()">Close</button>
+    </div>
+  </div>
+
+
+    <div class="terms-condition">
+        <h3 style="text-align: center;">TERMS & CONDITION</h3>
+        <ul>
+            <li>This Website was made for project purpose only.</li>
+            <li>You cannot purchase items from here</li>
+            <li>This website is owned and operated by Manistry. By accessing and using this website, you agree to be bound by these terms and conditions.</li>
+            <li>We reserve the right to modify these terms and conditions at any time without prior notice. Your continued use of the website following the posting of any changes constitutes your acceptance of such changes.</li>
+            <li>You may use this website for lawful purposes only. You are prohibited from using this website for any unlawful purpose, or for any purpose prohibited by these terms and conditions.</li>
+        </ul>
+    </div>
+
+    <div class="contact_us">
+        <h1>Contact Us</h1>
+        <p>Do you have any questions or feedback? Please feel free to contact us.</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+            <input type="hidden" name="access_key" value="9544d2cc-e9a4-4af0-b83f-488608337feb">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" class="input" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" class="input" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" class="input_message" required></textarea>
+            </div>
+            <button type="submit" id="submit_btn" class="Submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="static/script.js"></script> 
+</body>
+</html>

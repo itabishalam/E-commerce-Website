@@ -1,0 +1,400 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #f6f4ed;
+}
+
+header {
+    background-color: #f6f4ed;
+    display: flex;
+    justify-content: space-between;
+    /* Space between logo and navigation */
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #0f2649;
+}
+
+.logo img {
+    height: 70px;
+    /* Adjust logo size for responsiveness */
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+nav li a {
+    color: #0f2649;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+nav li:hover a {
+    color: #ab792d;
+    transition: color 0.25s;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section .cart {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Cart count badge */
+.right-section #cart-count {
+    position: absolute;
+    top: 50px;
+    right: 7%;
+    background-color: #0f2649;
+    color: #f6f4ed;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+    .right-section .cart {
+        width: 28px;
+        height: 28px;
+    }
+
+    .right-section #cart-count {
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+        top: -4px;
+        right: 20px;
+    }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+    .right-section .cart {
+        width: 24px;
+        height: 24px;
+    }
+
+    .right-section #cart-count {
+        width: 14px;
+        height: 14px;
+        font-size: 9px;
+        top: -3px;
+        right: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* For smaller screens */
+    nav {
+        flex-direction: column;
+        /* Stack navigation items vertically */
+        align-items: center;
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right-section {
+        margin-top: 20px;
+        /* Add space below navigation */
+    }
+}
+
+.product-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.product-card {
+    width: 300px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    margin: 10px;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    background-color: #0f2649;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+    .product-container {
+        width: calc(50% - 25px);
+        /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        width: calc(100% - 50px);
+        /* Adjust width for smaller screens */
+    }
+}
+
+
+/* Sidenav Button */
+.sidenav-btn {
+    position: absolute;
+    top: 130px;
+    left: 20px;
+    background-color: #0f2649;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    margin-left: 50px;
+
+}
+
+/* Sidenav Style */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1000;
+    top: 115.5px;
+    left: 0px;
+    color: #0f2649;
+    background-color: #f6f4ed;
+    border-radius: 1px;
+    overflow-y: auto;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.sidenav p {
+    text-emphasis: none;
+    text-align: center;
+}
+
+/* Close Button */
+.sidenav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Sidenav Content */
+.sidenav h3 {
+
+    color: #333;
+    text-align: center;
+
+}
+
+.sidenav input[type="range"] {
+    width: 80%;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.sidenav .style-options {
+    margin-left: 30px;
+
+}
+
+.apply-btn {
+    background-color: #0f2649;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Scroll behavior */
+body.lock-scroll {
+    overflow: hidden;
+}
+
+/* Checkout Section */
+.checkout-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f6f4ed;
+    border: 1px solid #0f2649;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.checkout-section h1 {
+    text-align: center;
+}
+
+.checkout-product-list {
+    margin-bottom: 20px;
+}
+
+.checkout-item {
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside the item */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    margin: 15px; /* Space between children */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    background-color: #f9f9f9; /* Light background for better contrast */
+}
+
+.checkout-item-info {
+    display: flex; /* Use flexbox for item info layout */
+    align-items: center; /* Center items vertically */
+}
+
+.checkout-item img {
+    width: 50px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between image and text */
+}
+
+.checkout-item h4 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.2em; /* Slightly larger font for item name */
+}
+
+.checkout-item p {
+    margin: 0; /* Remove default margin */
+    color: #555; /* Darker gray for price text */
+}
+
+.checkout-total {
+    text-align: right;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#payment-form {
+    margin-top: 20px;
+}
+
+#card-element {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#submit {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#submit:hover {
+    background-color: #218838;
+}
+
+#payment-result {
+    margin-top: 10px;
+    color: red;
+}
+
+/* Empty Cart Message */
+#empty-cart-message {
+    text-align: center;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Checkout Actions */
+.checkout-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkout-actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-actions button:hover {
+    opacity: 0.8;
+}
